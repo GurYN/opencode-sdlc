@@ -1,4 +1,4 @@
-Safely update dependencies for $PACKAGE_MANAGER
+What package manager are you using? Please specify (npm, pip, yarn, pnpm, bun).
 
 Switch to migrator agent and perform dependency updates:
 
@@ -32,7 +32,7 @@ For each category:
 - [ ] Document current versions
 
 ## 5. Execute Updates
-For $PACKAGE_MANAGER:
+Based on your package manager:
 
 **npm**:
 ```bash

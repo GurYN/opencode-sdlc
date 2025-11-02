@@ -1,7 +1,9 @@
-Implement $FEATURE_NAME following Test-Driven Development (TDD):
+What feature would you like me to implement? Please provide the feature name.
+
+I'll implement it following Test-Driven Development (TDD):
 
 ## Phase 1: Review Design
-Switch to designer agent and review the design for $FEATURE_NAME in docs/design/
+Switch to designer agent and review the design in docs/design/
 
 ## Phase 2: Write Tests First
 Switch to tester agent and create:

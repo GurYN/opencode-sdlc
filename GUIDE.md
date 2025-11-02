@@ -28,8 +28,11 @@ See the main `README.md` Configuration section for setting up environment variab
 
 ### Run Commands
 ```bash
-/command-name ARGUMENT="value"
+# Simply run the command - it will ask for required information
+/command-name
 ```
+
+Commands work **interactively** - they ask you for the information they need.
 
 ### Use Custom Tools
 Ask Agent to invoke tools during conversation:
@@ -259,19 +262,18 @@ Switch to operator agent
 #### /plan-feature
 **Purpose**: Comprehensive feature planning
 
-**Arguments**:
-- `$FEATURE_NAME` - Name of the feature
-- `$TICKET_ID` - (Optional) Ticket ID for reference
-
-**What it does**:
+**How it works**:
 - Switches to planner agent
+- Asks you for feature name and ticket ID (optional)
 - Creates technical specs
 - Defines architecture
 - Estimates complexity
 
 **Example**:
 ```bash
-/plan-feature FEATURE_NAME="user authentication" TICKET_ID="PROJ-123"
+/plan-feature
+# Agent asks: "What feature would you like me to plan?"
+# You respond: "user authentication from ticket PROJ-123"
 ```
 
 ---
@@ -279,10 +281,9 @@ Switch to operator agent
 #### /implement-with-tests
 **Purpose**: TDD implementation workflow
 
-**Arguments**:
-- `$FEATURE_NAME` - Name of the feature to implement
-
-**What it does**:
+**How it works**:
+- Asks you for the feature name
+- Then follows TDD workflow:
 1. Reviews design docs
 2. Writes failing tests (TDD red phase)
 3. Implements code (TDD green phase)
@@ -292,7 +293,9 @@ Switch to operator agent
 
 **Example**:
 ```bash
-/implement-with-tests FEATURE_NAME="OAuth integration"
+/implement-with-tests
+# Agent asks: "What feature would you like me to implement?"
+# You respond: "OAuth integration"
 ```
 
 ---
@@ -300,10 +303,9 @@ Switch to operator agent
 #### /refactor-safely
 **Purpose**: Safe refactoring with comprehensive testing
 
-**Arguments**:
-- `$TARGET` - File or module to refactor
-
-**What it does**:
+**How it works**:
+- Asks you for the refactoring target
+- Then follows safe refactoring process:
 1. Analyzes current code
 2. Ensures test coverage >90%
 3. Plans refactoring steps
@@ -312,7 +314,9 @@ Switch to operator agent
 
 **Example**:
 ```bash
-/refactor-safely TARGET="src/services/auth.ts"
+/refactor-safely
+# Agent asks: "What would you like to refactor?"
+# You respond: "src/services/auth.ts"
 ```
 
 ---
@@ -322,20 +326,21 @@ Switch to operator agent
 #### /pre-deployment-check
 **Purpose**: Comprehensive pre-deployment checklist
 
-**Arguments**:
-- `$ENVIRONMENT` - Target environment (staging/production)
-
-**What it does**:
-- Validates code quality
-- Runs security scans
-- Checks performance
-- Verifies documentation
-- Validates infrastructure
-- Provides GO/NO-GO recommendation
+**How it works**:
+- Asks you for the target environment
+- Then runs comprehensive checks:
+  - Validates code quality
+  - Runs security scans
+  - Checks performance
+  - Verifies documentation
+  - Validates infrastructure
+  - Provides GO/NO-GO recommendation
 
 **Example**:
 ```bash
-/pre-deployment-check ENVIRONMENT="production"
+/pre-deployment-check
+# Agent asks: "What environment are you deploying to?"
+# You respond: "production"
 ```
 
 ---
@@ -343,21 +348,22 @@ Switch to operator agent
 #### /rollback-deployment
 **Purpose**: Emergency rollback procedure
 
-**Arguments**:
-- `$ENVIRONMENT` - Environment to rollback
-- `$CURRENT_VERSION` - Current version
-- `$TARGET_VERSION` - Version to rollback to
-- `$REASON` - Reason for rollback
-
-**What it does**:
-- Executes rollback procedures
-- Handles database migrations
-- Verifies rollback success
-- Creates incident documentation
+**How it works**:
+- Asks you for environment, current version, target version, and reason
+- Then executes rollback:
+  - Executes rollback procedures
+  - Handles database migrations
+  - Verifies rollback success
+  - Creates incident documentation
 
 **Example**:
 ```bash
-/rollback-deployment ENVIRONMENT="production" CURRENT_VERSION="v2.5.0" TARGET_VERSION="v2.4.3" REASON="Critical auth bug"
+/rollback-deployment
+# Agent asks for:
+# - Environment: production
+# - Current version: v2.5.0
+# - Target version: v2.4.3
+# - Reason: Critical auth bug
 ```
 
 ---
@@ -367,12 +373,9 @@ Switch to operator agent
 #### /incident-response
 **Purpose**: Structured production incident protocol
 
-**Arguments**:
-- `$SEVERITY` - Incident severity (P0/P1/P2/P3)
-- `$TIME_RANGE` - Time range to investigate (e.g., "last 2 hours")
-- `$DESCRIPTION` - Brief description of the issue
-
-**What it does**:
+**How it works**:
+- Asks you for severity, time range, and description
+- Then follows incident response protocol:
 1. Triages incident
 2. Investigates root cause
 3. Recommends mitigation
@@ -381,7 +384,11 @@ Switch to operator agent
 
 **Example**:
 ```bash
-/incident-response SEVERITY="P1" TIME_RANGE="last 2 hours" DESCRIPTION="API response time degraded"
+/incident-response
+# Agent asks for:
+# - Severity: P1
+# - Time range: last 2 hours
+# - Description: API response time degraded
 ```
 
 ---
@@ -389,10 +396,9 @@ Switch to operator agent
 #### /analyze-performance
 **Purpose**: Performance analysis and optimization
 
-**Arguments**:
-- `$COMPONENT` - Component to analyze
-
-**What it does**:
+**How it works**:
+- Asks you for the component to analyze
+- Then performs analysis:
 1. Collects performance metrics
 2. Profiles code
 3. Analyzes database queries
@@ -401,7 +407,9 @@ Switch to operator agent
 
 **Example**:
 ```bash
-/analyze-performance COMPONENT="API endpoint /users"
+/analyze-performance
+# Agent asks: "What component would you like to analyze?"
+# You respond: "API endpoint /users"
 ```
 
 ---
@@ -430,10 +438,9 @@ Switch to operator agent
 #### /update-dependencies
 **Purpose**: Safe dependency updates
 
-**Arguments**:
-- `$PACKAGE_MANAGER` - Package manager (npm/pip/yarn)
-
-**What it does**:
+**How it works**:
+- Asks you for the package manager
+- Then performs safe updates:
 1. Audits current dependencies
 2. Categorizes updates by risk
 3. Updates safely
@@ -442,7 +449,9 @@ Switch to operator agent
 
 **Example**:
 ```bash
-/update-dependencies PACKAGE_MANAGER="npm"
+/update-dependencies
+# Agent asks: "What package manager are you using?"
+# You respond: "npm"
 ```
 
 ---
@@ -450,10 +459,9 @@ Switch to operator agent
 #### /generate-docs
 **Purpose**: Documentation generation
 
-**Arguments**:
-- `$TARGET` - Target module or component
-
-**What it does**:
+**How it works**:
+- Asks you for the documentation target
+- Then generates documentation:
 1. Generates API documentation
 2. Creates architecture diagrams
 3. Writes user/developer guides
@@ -461,7 +469,9 @@ Switch to operator agent
 
 **Example**:
 ```bash
-/generate-docs TARGET="src/api"
+/generate-docs
+# Claude asks: "What would you like to document?"
+# You respond: "src/api"
 ```
 
 ---
@@ -689,7 +699,8 @@ BREAKING CHANGE: change API endpoint structure
 
 ```bash
 # Step 1: Plan
-/plan-feature FEATURE_NAME="user profile page" TICKET_ID="PROJ-456"
+/plan-feature
+# Provide: "user profile page" from ticket PROJ-456
 
 # Step 2: Design
 # Switch to designer agent (Tab)
@@ -697,14 +708,16 @@ BREAKING CHANGE: change API endpoint structure
 > Design API endpoints for profile data
 
 # Step 3: Implement with Tests
-/implement-with-tests FEATURE_NAME="user profile page"
+/implement-with-tests
+# Provide: "user profile page"
 
 # Step 4: Review
 # Switch to reviewer agent (Tab)
 > Review all changes for the user profile page feature
 
 # Step 5: Pre-deployment Check
-/pre-deployment-check ENVIRONMENT="staging"
+/pre-deployment-check
+# Provide: "staging"
 
 # Step 6: Release
 # Switch to releaser agent (Tab)
@@ -717,10 +730,12 @@ BREAKING CHANGE: change API endpoint structure
 
 ```bash
 # Step 1: Respond to incident
-/incident-response SEVERITY="P1" TIME_RANGE="last hour" DESCRIPTION="API errors 500"
+/incident-response
+# Provide: Severity=P1, Time Range="last hour", Description="API errors 500"
 
 # Step 2: If rollback needed
-/rollback-deployment ENVIRONMENT="production" CURRENT_VERSION="v1.2.0" TARGET_VERSION="v1.1.5" REASON="API errors"
+/rollback-deployment
+# Provide: Environment=production, Current=v1.2.0, Target=v1.1.5, Reason="API errors"
 
 # Step 3: Post-incident documentation
 # Switch to operator agent
@@ -742,7 +757,8 @@ check_compliance()
 security_scan()
 
 # Step 4: Update vulnerable dependencies
-/update-dependencies PACKAGE_MANAGER="npm"
+/update-dependencies
+# Provide: "npm"
 
 # Step 5: Verify fixes
 /security-audit
@@ -754,7 +770,8 @@ security_scan()
 
 ```bash
 # Step 1: Analyze and plan
-/refactor-safely TARGET="src/legacy/auth-service.ts"
+/refactor-safely
+# Provide: "src/legacy/auth-service.ts"
 
 # Step 2: Track progress
 track_phase({ phase: "refactor" })

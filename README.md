@@ -40,7 +40,8 @@ chmod +x install.sh
 opencode
 
 # 3. Try your first feature
-/plan-feature FEATURE_NAME="hello world"
+/plan-feature
+# When prompted, provide: "hello world"
 
 # 4. Configure notifications (optional - see Environment Variables below)
 ```
@@ -328,31 +329,36 @@ opencode
 
 ```bash
 # 1. Plan
-/plan-feature FEATURE_NAME="user authentication" TICKET_ID="PROJ-123"
+/plan-feature
+# Provide: "user authentication" from ticket PROJ-123
 
 # 2. Design
 # Switch to designer agent (Tab)
 > Create API design for authentication
 
 # 3. Implement with tests
-/implement-with-tests FEATURE_NAME="user authentication"
+/implement-with-tests
+# Provide: "user authentication"
 
 # 4. Review
 # Switch to reviewer agent (Tab)
 > Review authentication implementation
 
 # 5. Deploy
-/pre-deployment-check ENVIRONMENT="production"
+/pre-deployment-check
+# Provide: "production"
 ```
 
 ### Handle Production Incident
 
 ```bash
 # Respond to incident
-/incident-response SEVERITY="P1" TIME_RANGE="last hour" DESCRIPTION="API errors"
+/incident-response
+# Provide: Severity=P1, Time Range="last hour", Description="API errors"
 
 # If rollback needed
-/rollback-deployment ENVIRONMENT="production" CURRENT_VERSION="v2.0" TARGET_VERSION="v1.9" REASON="Critical bug"
+/rollback-deployment
+# Provide: Environment=production, Current=v2.0, Target=v1.9, Reason="Critical bug"
 ```
 
 ### Security Audit
@@ -365,7 +371,8 @@ opencode
 check_compliance()
 
 # Update vulnerable dependencies
-/update-dependencies PACKAGE_MANAGER="npm"
+/update-dependencies
+# Provide: "npm"
 ```
 
 ### Quality Gate Workflow

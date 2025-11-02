@@ -1,6 +1,10 @@
-Switch to the planner agent and analyze requirements for $FEATURE_NAME.
+Switch to the planner agent.
 
-Create a comprehensive plan including:
+What feature would you like me to plan? Please provide:
+- Feature name
+- Ticket ID (optional)
+
+I'll create a comprehensive plan including:
 
 1. **Requirements Summary**
    - User story
@@ -40,4 +44,4 @@ Create a comprehensive plan including:
    - T-shirt size (XS/S/M/L/XL)
    - Justification
 
-If details are missing, search Jira/Linear for ticket $TICKET_ID and reference existing design docs.
+If you provide a ticket ID, I'll search Jira/Linear for additional details.

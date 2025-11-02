@@ -1,4 +1,4 @@
-Analyze and optimize performance for $COMPONENT
+What component would you like to analyze? Please specify (e.g., API endpoint, database query, frontend page).
 
 Switch to operator agent and conduct performance analysis:
 
@@ -12,7 +12,7 @@ Gather current performance metrics:
 - [ ] Database query times
 
 ## 2. Profiling
-- [ ] Run profiler on $COMPONENT
+- [ ] Run profiler on the component
 - [ ] Identify hot paths (CPU time)
 - [ ] Find memory leaks
 - [ ] Analyze async operations

@@ -1,15 +1,17 @@
-Safely refactor $TARGET with comprehensive testing
+What would you like to refactor? Please provide the target (file, function, class, or module).
+
+I'll safely refactor it with comprehensive testing:
 
 ## Phase 1: Understand Current State
 Switch to implementer agent and analyze:
-1. Read and understand $TARGET
+1. Read and understand the target
 2. Identify dependencies (imports/exports)
 3. Find all usages across codebase
 4. Document current behavior
 
 ## Phase 2: Ensure Test Coverage
 Switch to tester agent and:
-1. Check current test coverage for $TARGET
+1. Check current test coverage for the target
 2. If coverage <90%, add tests for:
    - All public methods/functions
    - Edge cases

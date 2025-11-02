@@ -1,4 +1,6 @@
-Run comprehensive pre-deployment checklist for $ENVIRONMENT environment:
+What environment are you deploying to? Please specify (e.g., staging, production).
+
+I'll run a comprehensive pre-deployment checklist:
 
 ## 1. Code Quality
 Switch to reviewer agent and verify:

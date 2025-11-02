@@ -1,8 +1,9 @@
 INCIDENT RESPONSE: Investigate and mitigate production issue
 
-**Severity**: $SEVERITY (P0/P1/P2/P3)
-**Time Range**: $TIME_RANGE
-**Description**: $DESCRIPTION
+Please provide:
+- Severity (P0/P1/P2/P3)
+- Time range to investigate (e.g., "last hour", "last 30 minutes")
+- Brief description of the issue
 
 Switch to operator agent and follow incident response protocol:
 
@@ -13,7 +14,7 @@ Switch to operator agent and follow incident response protocol:
 - [ ] Notify team via Slack
 
 ## 2. Investigation (5-30 min)
-- [ ] Check recent deployments in last $TIME_RANGE
+- [ ] Check recent deployments in the specified time range
 - [ ] Query error logs from monitoring (Datadog/CloudWatch)
 - [ ] Analyze metrics and traces
 - [ ] Review database slow queries

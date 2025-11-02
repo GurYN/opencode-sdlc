@@ -1,9 +1,9 @@
-Generate comprehensive documentation for $TARGET
+What would you like to document? Please specify (e.g., API, module, entire project).
 
 Switch to documenter agent and create documentation:
 
 ## 1. API Documentation
-If $TARGET includes APIs:
+If the target includes APIs:
 - [ ] Generate OpenAPI/Swagger specs
 - [ ] Document all endpoints
 - [ ] Include request/response examples

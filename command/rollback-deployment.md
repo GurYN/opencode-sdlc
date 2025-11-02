@@ -1,9 +1,10 @@
 URGENT: Rollback deployment to previous stable version
 
-**Environment**: $ENVIRONMENT
-**Current Version**: $CURRENT_VERSION
-**Target Version**: $TARGET_VERSION
-**Reason**: $REASON
+Please provide:
+- Environment (e.g., production, staging)
+- Current version
+- Target version to rollback to
+- Reason for rollback
 
 Switch to releaser agent and execute rollback:
 
@@ -20,7 +21,7 @@ Confirm:
 - [ ] Notify stakeholders
 
 ## 3. Pre-Rollback Checks
-- [ ] Verify target version $TARGET_VERSION exists
+- [ ] Verify target version exists
 - [ ] Check database compatibility
 - [ ] Verify configuration compatibility
 - [ ] Ensure no data loss risk
