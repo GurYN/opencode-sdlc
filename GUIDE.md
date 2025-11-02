@@ -1,6 +1,6 @@
 # OpenCode SDLC System - Complete Guide
 
-Welcome to the OpenCode SDLC (Software Development Lifecycle) system! This guide will help you understand and use all available agents, commands, and plugins.
+Welcome to the OpenCode SDLC (Software Development Lifecycle) system! This guide will help you understand and use all available agents, commands, tools, and plugins.
 
 ---
 
@@ -32,7 +32,7 @@ See the main `README.md` Configuration section for setting up environment variab
 ```
 
 ### Use Custom Tools
-Ask Claude to invoke tools during conversation:
+Ask Agent to invoke tools during conversation:
 ```
 "Use the track-phase tool to move to test phase"
 "Can you check the quality gate for test→review?"
@@ -472,7 +472,7 @@ Switch to operator agent
 
 **Custom Tools** (in `tool/` directory):
 - User/LLM-invokable functions called explicitly during conversations
-- Invoked by asking Claude: "Use the [tool-name] tool..."
+- Invoked by asking Agent: "Use the [tool-name] tool..."
 - Return results that inform the LLM's responses
 - Located in `~/.config/opencode/tool/`
 
@@ -482,7 +482,7 @@ Switch to operator agent
 - Silent background operations (e.g., metrics tracking, auto-notifications)
 - Located in `~/.config/opencode/plugin/`
 
-**How to Use Custom Tools**: Ask Claude to use them, for example:
+**How to Use Custom Tools**: Ask Agent to use them, for example:
 ```
 "Use the track-phase tool to transition to implement"
 "Can you check the quality gate for test→review?"
@@ -498,7 +498,7 @@ All custom tools are automatically discovered and available globally in OpenCode
 
 **Purpose**: Manually track SDLC phase transitions
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the track-phase tool to transition to implement"
 "Track that we're moving to the test phase"
@@ -519,7 +519,7 @@ All custom tools are automatically discovered and available globally in OpenCode
 
 **Purpose**: Validate quality gates before phase transitions
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the check-quality-gate tool for test→review transition"
 "Check if we can move from implement to test"
@@ -543,7 +543,7 @@ All custom tools are automatically discovered and available globally in OpenCode
 
 **Purpose**: View collected SDLC metrics
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the view-metrics tool to show me our metrics"
 "What are our current SDLC metrics?"
@@ -564,7 +564,7 @@ All custom tools are automatically discovered and available globally in OpenCode
 
 **Purpose**: Send notifications to team channels
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the send-notification tool to alert the dev channel about the deployment"
 "Send a notification to the team that we're deploying to staging"
@@ -591,7 +591,7 @@ All custom tools are automatically discovered and available globally in OpenCode
 
 **Purpose**: Get enriched project context
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the enrich-context tool to understand the project"
 "What's the current state of this project?"
@@ -613,7 +613,7 @@ All custom tools are automatically discovered and available globally in OpenCode
 
 **Purpose**: Generate changelog from commits
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the generate-changelog tool for version 1.2.0"
 "Generate a changelog for the next release"
@@ -647,7 +647,7 @@ BREAKING CHANGE: change API endpoint structure
 
 **Purpose**: Run compliance checks
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the check-compliance tool to verify our compliance"
 "Check if we meet compliance requirements"
@@ -668,7 +668,7 @@ BREAKING CHANGE: change API endpoint structure
 
 **Purpose**: Comprehensive security scan
 
-**Usage**: Ask Claude to use the tool
+**Usage**: Ask Agent to use the tool
 ```
 "Use the security-scan tool to check for vulnerabilities"
 "Run a security scan on the project"
@@ -868,9 +868,9 @@ check_quality_gate({ transition: "implement→test" })
 ## 📚 Additional Resources
 
 - **Plugin Documentation**: `cat ~/.config/opencode/plugin/README.md`
-- **Full PRD**: `cat ~/.config/opencode/opencode-sdlc-prd.md`
-- **CLAUDE.md**: Project-specific guidance
+- **Tool Documentation**: `cat ~/.config/opencode/tool/README.md`
 - **Agent Files**: Check individual agent .md files for detailed prompts
+- **Command Files**: Check individual command .md files for detailed prompts
 
 ---
 

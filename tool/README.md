@@ -173,7 +173,7 @@ Tools are automatically loaded from `~/.config/opencode/tool/` by OpenCode.
 
 ### Invoking Tools
 
-Ask Claude to use tools naturally in conversation:
+Ask Agent to use tools naturally in conversation:
 
 ```
 "Use the track-phase tool to transition to implement"

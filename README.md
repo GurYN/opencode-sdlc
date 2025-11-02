@@ -168,7 +168,7 @@ Custom tools are functions that the AI can invoke during conversation to perform
 
 ---
 
-**💡 How to use tools**: Ask Claude to invoke them naturally in conversation:
+**💡 How to use tools**: Ask Agent to invoke them naturally in conversation:
 - "Use the track-phase tool to move to test phase"
 - "Can you check the quality gate for test→review?"
 - "Show me the metrics using view-metrics"
@@ -234,6 +234,7 @@ After installation, documentation is available at:
 - **README.md** - Project presentation and quick reference
 - **GUIDE.md** - Guide to using OpenCode SDLC
 - **plugin/README.md** - Plugin documentation and API
+- **tool/README.md** - Tool documentation and API
 
 ## 🔧 Configuration
 
