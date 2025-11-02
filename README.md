@@ -53,6 +53,7 @@ These components are installed **once** and shared across all projects:
 - ✅ **Agents** - 11 specialized agents (7 primary + 4 subagents)
 - ✅ **Commands** - 10 workflow command templates
 - ✅ **Plugins** - 7 lifecycle plugins (code only)
+- ✅ **Tools** - 8 custom tools (workflow, monitoring, context & documentation, security)
 - ✅ **MCP Servers** - 3 integrated MCP servers (context7, serena, sequential-thinking)
 - ✅ **Documentation** - README.md, GUIDE.md
 
